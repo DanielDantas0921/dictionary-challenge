@@ -4,16 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Front-end mentor - Dictionary</title>
-    
+
     <script src="./src/js/main.js" defer type="module"></script>
     <link
       rel="shortcut icon"
       href="./src/img/favicon-32x32.png"
       type="image/x-icon"
-    />
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
@@ -25,24 +21,27 @@
           <div class="display-flex-font-and-theme">
             <div class="font">
               <p>Sans Serif</p>
+              <img src="./src/img/icon-arrow-down.svg" alt="" />
             </div>
 
             <div class="day-night-theme">
-                <div class="custom-control custom-switch">
-                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-                  </div>
-
+              <label class="theme-switcher">
+                <input type="checkbox" />
+                <span class="slider"></span>
+              </label>
+              <img src="./src/img/icon-moon.svg" alt="">
             </div>
           </div>
         </div>
+
+        <div class="div-input-search">
+          <input type="text" class="input-search">
+          <img class="icon-search" src="./src/img/icon-search.svg" alt="">
+        </div>
+
       </main>
     </div>
-    testeteste
 
     <script src="./src/js/switch.js" defer></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>

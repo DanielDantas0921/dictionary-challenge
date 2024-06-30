@@ -1,7 +1,10 @@
+@import "./switch.css";
+
 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 h1,h2,h3,h4,p{
@@ -19,6 +22,7 @@ h1,h2,h3,h4,p{
 }
 
 .container{
+    width: 100%;
     max-width: 45rem;
     margin: 0 auto;
     height: 100rem;
@@ -36,5 +40,50 @@ h1,h2,h3,h4,p{
 }
 
 .font{
+  margin-right: 1.2rem;
+  display: flex;
+  position: relative;
+}
+
+
+.font img{
+    margin-left: 0.5rem;
+}
+
+.font:after{
+    content: "";
+    width: 2px;
+    height: 30px;
+    background-color: #E9E9E9;
+    position: absolute;
+    right: -0.5rem;
+}
+
+.day-night-theme{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.div-input-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    position: relative;
     
+}
+
+.input-search{
+    width: 90%;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+    background-color: #F4F4F4;
+   
+}
+
+.icon-search{
+    position: absolute;
+    right: 3.2rem;
+    top: 1rem;
+    width: 20px;
 }
