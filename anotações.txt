@@ -1,0 +1,5 @@
+https://dictionaryapi.dev/ link da api
+
+fazer parte de preferencias
+dar um margin right na div font e colocar o ícone de aparecer as opçÕes das fontes
+fazer as opções das fontes
