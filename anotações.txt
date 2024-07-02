@@ -1,5 +1,8 @@
 https://dictionaryapi.dev/ link da api
 
-fazer parte de preferencias
-dar um margin right na div font e colocar o ícone de aparecer as opçÕes das fontes
-fazer as opções das fontes
+fazer as funções que vai buscar na api a palavra buscada no input
+
+fazer a função que vai ser do input e vai buscar na api
+
+--------------------------------------------
+fazer uma função que vai definir todos os elementos do html o seu texto. Criando assim seus elementos e definindo seu texto
