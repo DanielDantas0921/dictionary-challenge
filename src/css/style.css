@@ -25,8 +25,8 @@ h1,h2,h3,h4,p{
     width: 100%;
     max-width: 45rem;
     margin: 0 auto;
-    height: 100rem;
-    background-color: yellow;
+    height: auto;
+    padding: 1.5rem;
 }
 
 .preferences{
@@ -83,9 +83,10 @@ h1,h2,h3,h4,p{
 
 .icon-search{
     position: absolute;
-    right: 3.2rem;
+    right: 1.2rem;
     top: 1rem;
     width: 20px;
+    cursor: pointer;
 }
 
 .div-word-search{

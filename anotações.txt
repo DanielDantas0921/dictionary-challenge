@@ -1,8 +1,9 @@
 https://dictionaryapi.dev/ link da api
 
-fazer as funções que vai buscar na api a palavra buscada no input
+no makeElements fazer os elementos da div-word-search e fazer isso na função makeElements
 
-fazer a função que vai ser do input e vai buscar na api
+estilizar elementos conforme design
 
---------------------------------------------
-fazer uma função que vai definir todos os elementos do html o seu texto. Criando assim seus elementos e definindo seu texto
+fazer a caixa de seleção de fontes e aplicar um código javascript para mudar a tipografia e também implementar  thema claro escuro
+
+
