@@ -22,10 +22,9 @@ inputSearch.addEventListener("keydown", function (event){
     }
 })
 
-const audioPlay = document.querySelector(".icon-search")
+const iconSearch = document.querySelector(".icon-search")
 
-audioPlay.addEventListener("click", (event)=> { 
-    console.log("antes do if")
+iconSearch.addEventListener("click", (event)=> { 
         if(inputSearch.value == ""){
             return
         }
@@ -34,3 +33,4 @@ audioPlay.addEventListener("click", (event)=> {
         apiWordSearchFunction(inputSearch.value).then(result => makeElements(result))
 
 })
+

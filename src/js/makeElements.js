@@ -1,102 +1,116 @@
-export function makeElements(result){
+export function makeElements(result) {
+  makeElementsWordSearch(result);
 
-const wordSearchH1 = document.querySelector(".word-search h1")
-const wordSearchP = document.querySelector(".word-search p")
+  makeElementsMeanings(result[0].meanings);
 
-wordSearchH1.textContent = result[0].word
-findTextPhonetic(result[0].phonetics, wordSearchP)
+  const iconPlay = document.querySelector(".audio-play");
+  console.log(iconPlay);
 
-const audioPlay = document.querySelector(".audio-play")
-const audioAudio = document.querySelector(".audio-audio")
-
-findAudioPhonetic(result[0].phonetics, audioAudio)
-audioPlay.addEventListener("click", ()=> audioAudio.play())
-
-// fazer parte do dynamic text da div para baixo
-
-const divDynamicText = document.querySelector("dynamic-text")
-
-makeElementsMeanings(result[0].meanings)
-
-
+  iconPlay.addEventListener("click", () => {
+    const audioAudio = document.querySelector(".audio-audio");
+    audioAudio.play();
+  });
 }
 
+function makeElementsWordSearch(result) {
+  const divDynamicText = document.querySelector(".dynamic-text");
+  divDynamicText.innerHTML = "";
 
+  const divWordSearch = document.createElement("div");
+  divWordSearch.classList.add("div-word-search");
 
-function findTextPhonetic(arrayPhonetics, element){
-let textPhonetic = ""
-arrayPhonetics.forEach((item)=>{
+  const wordSearch = document.createElement("div");
+  wordSearch.classList.add("word-search");
+  const wordSearchH1 = document.createElement("h1");
+  wordSearchH1.classList.add("text-5xl")
+  wordSearchH1.innerText = result[0].word;
+  const wordSearchP = document.createElement("p");
+  wordSearchP.classList.add("text-xl")
+  findTextPhonetic(result[0].phonetics, wordSearchP);
 
-    if(item.text){
-        textPhonetic = item.text
-        element.innerText =textPhonetic
+  wordSearch.append(wordSearchH1, wordSearchP);
+  divWordSearch.appendChild(wordSearch);
+
+  const wordSearchIconPlay = document.createElement("div");
+  wordSearchIconPlay.classList.add("word-search-icon-play");
+  const wordSearchIconPlayImg = document.createElement("img");
+  wordSearchIconPlayImg.src = "./src/img/icon-play.svg";
+  wordSearchIconPlayImg.classList.add("audio-play");
+  const audioAudio = document.createElement("audio");
+  audioAudio.classList.add("audio-audio");
+  findAudioPhonetic(result[0].phonetics, audioAudio);
+  audioAudio.controls = true;
+
+  wordSearchIconPlay.append(wordSearchIconPlayImg, audioAudio);
+  divWordSearch.appendChild(wordSearchIconPlay);
+
+  divDynamicText.appendChild(divWordSearch);
+  console.log(divDynamicText);
+  console.log(divWordSearch);
+}
+
+function findTextPhonetic(arrayPhonetics, element) {
+  let textPhonetic = "";
+  arrayPhonetics.forEach((item) => {
+    if (item.text) {
+      textPhonetic = item.text;
+      element.innerText = textPhonetic;
     } else {
-        element.innerText = "phonetic text not found"
+      element.innerText = "phonetic text not found";
     }
-})
-
+  });
 }
 
-function findAudioPhonetic(arrayPhonetics, elementAudio){
-    let srcPhonetic = ""
-    arrayPhonetics.forEach((item)=>{
-        if(item.audio){
-            srcPhonetic = item.audio
-            elementAudio.src = srcPhonetic
-        }
-    })
+function findAudioPhonetic(arrayPhonetics, elementAudio) {
+  let srcPhonetic = "";
+  arrayPhonetics.forEach((item) => {
+    if (item.audio) {
+      srcPhonetic = item.audio;
+      elementAudio.src = srcPhonetic;
+    }
+  });
 }
 
-function makeElementsMeanings(arrayMeanings){
+function makeElementsMeanings(arrayMeanings) {
+  const divDynamicText = document.querySelector(".dynamic-text");
 
+  arrayMeanings.forEach((item) => {
+    const divMeaning = document.createElement("div");
+    divMeaning.classList.add("divMeaning");
 
-    const divDynamicText = document.querySelector(".dynamic-text")
-    divDynamicText.innerHTML = ""
+    const h3PartOfSpeach = document.createElement("h3");
+    h3PartOfSpeach.innerText = item.partOfSpeech;
+    h3PartOfSpeach.classList.add("part-of-speech", "text-xl");
 
+    const pMeaning = document.createElement("p");
+    pMeaning.innerText = "Meaning";
+    pMeaning.classList.add("meaning", "text-xl");
 
-    arrayMeanings.forEach((item)=>{
+    const listaUl = document.createElement("ul");
+    listaUl.classList.add("text-base")
 
-        const divMeaning = document.createElement("div")
-        divMeaning.classList.add("divMeaning")
+    item.definitions.forEach((item) => {
+      const li = document.createElement("li");
+      li.innerText = item.definition;
+      listaUl.appendChild(li);
+    });
 
-        const h3PartOfSpeach = document.createElement("h3")
-        h3PartOfSpeach.innerText = item.partOfSpeech
-        h3PartOfSpeach.classList.add("part-of-speech")
+    const synonymsText = document.createElement("p");
+    let textSynonyms = " ";
 
-        const pMeaning = document.createElement("p")
-        pMeaning.innerText = "Meaning"
-        pMeaning.classList.add("meaning")
+    divMeaning.append(h3PartOfSpeach, pMeaning, listaUl);
 
-        const listaUl = document.createElement("ul")
+    if (item.synonyms.length != 0) {
+      item.synonyms.forEach((item) => {
+        console.log(item);
+        textSynonyms = textSynonyms + item + "; ";
+      });
 
-        item.definitions.forEach((item)=>{
-            const li = document.createElement("li")
-            li.innerText = item.definition
-            listaUl.appendChild(li)
-        })
+      synonymsText.innerHTML =
+        "<p class='synonymous text-xl'>Synonymous:" + textSynonyms + "</p>";
+      divMeaning.appendChild(synonymsText);
+    }
 
-
-
-        const synonymsText = document.createElement("p")
-        let textSynonyms = " "
-
-        divMeaning.append(h3PartOfSpeach, pMeaning,listaUl)
-
-        if(item.synonyms.length != 0){
-           
-
-
-            item.synonyms.forEach((item)=>{
-                console.log(item)
-                textSynonyms = textSynonyms + item + "; "
-            })
-
-            synonymsText.innerHTML= "<p class='synonymous'>Synonymous:" + textSynonyms + "</p>"
-            divMeaning.appendChild(synonymsText)
-        }
-
-        divDynamicText.appendChild(divMeaning)
-    })
-
-
+    divDynamicText.appendChild(divMeaning);
+  });
 }
