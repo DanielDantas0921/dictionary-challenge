@@ -4,5 +4,59 @@
     
     /* variavéis de cor */
     
+    --black01: #050505; /* Black Deep */
+    --black02: #1F1F1F; /* Black Dark */
+    --black03: #2D2D2D; /* Black Medium */
 
+    --grey01: #3A3A3A; /* Grey Dark */
+    --grey02: #757575; /* Grey Medium */
+    --grey03: #F9E9E9; /* Grey Light Pinkish */
+    --grey04: #F4F4F4; /* Grey Very Light */
+
+    --white: #FFFFFF; /* White Pure */
+
+    --violet: #A445ED; /* Violet Bright */
+    
+    --red: #FF5252; /* Red Bright */
+
+    /* https://chatgpt.com/share/bafe8ee6-887a-49c5-b3ef-3529d0e21802 */
+}
+
+.colorBlack01{
+    color: var(--black01);
+}
+
+.colorBlack02{
+    color: var(--black02);
+}
+
+.colorBlack03{
+    color: var(--black03);
+}
+
+.colorGrey01{
+    color: var(--grey01);
+}
+
+.colorGrey02{
+    color: var(--grey02);
+}
+
+.colorGrey03{
+    color: var(--grey03);
+}
+.colorGrey04{
+    color: var(--grey04);
+}
+
+.colorWhite{
+    color: var(--white);
+}
+
+.colorViolet{
+    color: var(--violet);
+}
+
+.colorRed{
+    color: var(--red);
 }

@@ -3,8 +3,9 @@ export function makeElements(result) {
 
   makeElementsMeanings(result[0].meanings);
 
+  makeElementSource(result);
+
   const iconPlay = document.querySelector(".audio-play");
-  console.log(iconPlay);
 
   iconPlay.addEventListener("click", () => {
     const audioAudio = document.querySelector(".audio-audio");
@@ -107,10 +108,35 @@ function makeElementsMeanings(arrayMeanings) {
       });
 
       synonymsText.innerHTML =
-        "<p class='synonymous text-xl'>Synonymous:" + textSynonyms + "</p>";
+        "<p class='synonymous text-xl'>Synonymous:<span>" + textSynonyms + "</span>" + "</p>";
       divMeaning.appendChild(synonymsText);
     }
 
     divDynamicText.appendChild(divMeaning);
   });
+}
+
+function makeElementSource(result){
+
+  const divDynamicText = document.querySelector(".dynamic-text");
+
+  const divSource = document.createElement("div")
+  divSource.classList.add("div-source")
+
+  const link = result[0].sourceUrls[0]
+
+  const divSourceP = document.createElement("p")
+  divSourceP.innerText ="Source: "
+  const divSourceSpan = document.createElement("span")
+  divSourceSpan.innerHTML = '<span>' + link + '<img src="./src/img/icon-new-window.svg"  alt="new window"></span>'
+
+  divSourceSpan.addEventListener("click", function(){
+    window.open(link, "_blank")
+  })
+
+  divSource.append(divSourceP, divSourceSpan)
+
+  divDynamicText.appendChild(divSource)
+
+
 }

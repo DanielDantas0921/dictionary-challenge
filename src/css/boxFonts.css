@@ -1,0 +1,21 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.box-fonts{
+    position: absolute;
+    bottom: -4rem;
+    left: 0;
+    z-index: 100;
+    background-color: #ffff;
+    width: 107%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+    /* padding: 0 0 0 0.5rem; */
+}
+
+.box-fonts span:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}

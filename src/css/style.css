@@ -1,6 +1,9 @@
 @import "./typograph.css";
+@import "./colors.css";
 @import "./switch.css";
+@import "boxFonts.css";
 
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Inter:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 *{
     margin: 0;
@@ -13,9 +16,13 @@ h1,h2,h3,h4,p{
     padding: 0;
 }
 
+body{
+    background-color: var(--backgroundColorPage);
+    font-family: "Inter" ;
+}
+
 
 .display-flex{
-   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,6 +55,7 @@ h1,h2,h3,h4,p{
 
 .font p{
     font-weight: bold;
+    color: var(--black03);
 }
 
 
@@ -102,7 +110,10 @@ h1,h2,h3,h4,p{
 }
 
 .word-search h1{
-    /* font-size: 2.5rem; */
+    color: var(--black03);
+}
+.word-search p{
+    color: var(--violet);
 }
 
 .word-search-icon-play{
@@ -121,16 +132,44 @@ ul{
 
 .part-of-speech{
     margin: 1rem 0;
+    color: var(--black03);
 }
 
 .meaning{
     margin: 0.8rem 0;
+    color: var(--grey02);
+}
+
+
+.divMeaning ul{
+    color: var(--black03);
 }
 
 .synonymous{
     margin-top: 1rem;
+    color: var(--grey02);
+}
+
+.synonymous > span{
+    color: var(--violet);
 }
 
 .word-search-icon-play audio{
     display: none;
+}
+
+.div-source{
+    display: flex;
+    margin-top: 0.8rem;
+    
+}
+
+.div-source p{
+    color: var(--grey02);
+    margin-right: 0.5rem;
+}
+
+.div-source span{
+    color: var(--black03);
+    cursor: pointer;
 }
