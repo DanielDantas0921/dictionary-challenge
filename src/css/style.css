@@ -194,3 +194,19 @@ ul{
     color: var(--black03);
     cursor: pointer;
 }
+
+#labelzinha::after{
+    content: "teste";
+}
+
+#labelzinha::before{
+    content: "outro teste";
+}
+
+.spanzinhosafado::after{
+    content: "aa";
+}
+
+.spanzinhosafado::before{
+    content: "bb";
+}

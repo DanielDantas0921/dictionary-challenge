@@ -87,13 +87,12 @@ fontMono.addEventListener("click", function (event){
     fontP.innerText = "Mono"
 })
 
+// const themeSwitcher = document.querySelector(".slider")
+// themeSwitcher.addEventListener("click", function(){
+//   themeLightmodeAndDarkmode()
+// })
 
-const themeSwitcher = document.querySelector(".theme-switcher")
-  themeSwitcher.addEventListener("click", function (){
-    themeLightmodeAndDarkmode()
-  })
-
-
- 
-
-
+const themeSwitcher = document.querySelector(".slider")
+themeSwitcher.addEventListener("click", function(){
+  themeLightmodeAndDarkmode()
+})

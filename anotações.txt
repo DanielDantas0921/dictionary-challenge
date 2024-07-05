@@ -1,3 +1,15 @@
 https://dictionaryapi.dev/ link da api
 
- fazer thema claro e escuro
+ fazer thema claro e escuro(
+
+    fazer uma condição para caso o elemento exista ai ele executa todo o resto isso no forEach do Object.values
+
+    corrigir a seleção de p para quando for um array ou nodeList ele 
+    executar um for each e iterar sobre cada elemento mudando assim as classes e no final
+    dar um continue
+
+    continuar fazendo o thema claro e escuro fazendo o registro no arquivo registro para o thema claro escuro e em seguida adicionando via html ou via javascript
+
+
+
+ )
