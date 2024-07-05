@@ -9,10 +9,26 @@
     bottom: -4rem;
     left: 0;
     z-index: 100;
-    background-color: #ffff;
     width: 107%;
-    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
     /* padding: 0 0 0 0.5rem; */
+}
+
+.box-fonts.lightmode{
+    background-color: #ffff;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.box-fonts.darkmode{
+    background-color: var(--black01);
+    box-shadow: 0 4px 8px rgba(5, 5, 5, 0.3)
+
+}
+.box-fonts p.lightmode{
+    color:var(--black03) ;
+}
+
+.box-fonts p.darkmode{
+    color: var(--white);
 }
 
 .box-fonts span:hover{

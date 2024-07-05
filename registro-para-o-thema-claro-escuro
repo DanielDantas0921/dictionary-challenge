@@ -1,0 +1,13 @@
+body.lightmode
+body.darkmode
+
+
+.font  > p.darkmode (para o p que é da sans-serif)
+.font > p.lightmode 
+
+arquivo boxFonts.css 
+.box-fonts.lightmode
+.box-fonts.darkmode 
+
+.box-fonts p.lightmode
+.box-fonts p.darkmode

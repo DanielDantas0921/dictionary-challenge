@@ -13,19 +13,19 @@
     />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
-  <body>
+  <body class="lightmode">
     <div class="display-flex">
       <main class="container">
         <div class="preferences">
           <img src="./src/img/logo.svg" alt="logo" />
           <div class="display-flex-font-and-theme">
             <div class="font">
-              <p>Sans Serif</p>
+              <p class="lightmode">Sans Serif</p>
               <img src="./src/img/icon-arrow-down.svg" alt="" />
-              <div class="box-fonts" style="display: none;">
-                <p id="fontSansSerif">● <span>Sans Serif</span></p>
-                <p id="fontSerif">● <span>Serif</span></p>
-                <p id="fontMono">● <span>Mono</span></p>
+              <div class="box-fonts lightmode" style="display: none;">
+                <p class="lightmode" id="fontSansSerif">● <span>Sans Serif</span></p>
+                <p class="lightmode" id="fontSerif">● <span>Serif</span></p>
+                <p class="lightmode" id="fontMono">● <span>Mono</span></p>
               </div>
             </div>
 
@@ -50,6 +50,5 @@
       </main>
     </div>  
 
-    <script src="./src/js/switch.js" defer></script>
   </body>
 </html>

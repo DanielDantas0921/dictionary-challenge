@@ -17,8 +17,15 @@ h1,h2,h3,h4,p{
 }
 
 body{
-    background-color: var(--backgroundColorPage);
     font-family: "Inter" ;
+}
+
+body.lightmode{
+    background-color: #ffffff;
+}
+
+body.darkmode{
+    background-color: var(--black01);
 }
 
 
@@ -53,14 +60,28 @@ body{
   position: relative;
 }
 
-.font p{
+.font  > p{
     font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+}
+
+.font  > p.lightmode{
     color: var(--black03);
 }
 
+.font  > p.darkmode{
+    color: var(--white);
+}
 
-.font img{
+.font  p{
+    font-weight: bold;
+}
+
+
+.font > img{
     margin-left: 0.5rem;
+    cursor: pointer;
 }
 
 .font:after{

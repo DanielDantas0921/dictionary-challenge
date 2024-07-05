@@ -1,5 +1,6 @@
 import {apiWordSearchFunction} from "./apiFunction.js"
 import {makeElements} from "./makeElements.js"
+import {themeLightmodeAndDarkmode} from "./themeLightmodeAndDarkmode.js"
 
 
 // apiWordSearchFunction("hello").then(result => makeElements(result))
@@ -69,18 +70,30 @@ divFontP.addEventListener("click", function (){
 const fontSansSerif = document.getElementById("fontSansSerif")
 const fontSerif = document.getElementById("fontSerif")
 const fontMono = document.getElementById("fontMono")
+const fontP = document.querySelector(".font > p")
 
 fontSansSerif.addEventListener("click", function (event){
     document.body.style.fontFamily= "Inter"
+    fontP.innerText = "Sans Serif"
 })
 
 fontSerif.addEventListener("click", function (event){
     document.body.style.fontFamily = "Lora"
+    fontP.innerText = "Serif"
 })
 
 fontMono.addEventListener("click", function (event){
     document.body.style.fontFamily = "Inconsolata"
+    fontP.innerText = "Mono"
 })
 
-// colocar o span para mandar o span para mandar para algum lugar já que não foi colocado um a
+
+const themeSwitcher = document.querySelector(".theme-switcher")
+  themeSwitcher.addEventListener("click", function (){
+    themeLightmodeAndDarkmode()
+  })
+
+
+ 
+
 

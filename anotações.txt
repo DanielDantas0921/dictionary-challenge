@@ -1,9 +1,3 @@
 https://dictionaryapi.dev/ link da api
 
-
-estilizar elementos conforme design
-
-fazer a caixa de seleção de fontes e aplicar um código javascript para mudar a tipografia e também implementar  thema claro escuro
-
-implementar a parte de não encontrado na busca e também input vazio (não pode ser vazio o input)
-
+ fazer thema claro e escuro
