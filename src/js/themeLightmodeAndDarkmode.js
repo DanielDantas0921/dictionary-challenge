@@ -77,7 +77,7 @@ export function toggleThemebugFix(){
         body.classList.add("darkmode")
       }
     }
-  },500)
+  },1000)
   
  
 }
