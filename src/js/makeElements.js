@@ -23,7 +23,7 @@ function makeElementsWordSearch(result) {
   const wordSearch = document.createElement("div");
   wordSearch.classList.add("word-search");
   const wordSearchH1 = document.createElement("h1");
-  wordSearchH1.classList.add("text-5xl")
+  wordSearchH1.classList.add("text-5xl", "lightmode")
   wordSearchH1.innerText = result[0].word;
   const wordSearchP = document.createElement("p");
   wordSearchP.classList.add("text-xl")
@@ -81,14 +81,14 @@ function makeElementsMeanings(arrayMeanings) {
 
     const h3PartOfSpeach = document.createElement("h3");
     h3PartOfSpeach.innerText = item.partOfSpeech;
-    h3PartOfSpeach.classList.add("part-of-speech", "text-xl");
+    h3PartOfSpeach.classList.add("part-of-speech", "text-xl", "lightmode");
 
     const pMeaning = document.createElement("p");
     pMeaning.innerText = "Meaning";
     pMeaning.classList.add("meaning", "text-xl");
 
     const listaUl = document.createElement("ul");
-    listaUl.classList.add("text-base")
+    listaUl.classList.add("text-base", "lightmode")
 
     item.definitions.forEach((item) => {
       const li = document.createElement("li");

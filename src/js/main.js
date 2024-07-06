@@ -1,6 +1,6 @@
 import {apiWordSearchFunction} from "./apiFunction.js"
 import {makeElements} from "./makeElements.js"
-import {themeLightmodeAndDarkmode} from "./themeLightmodeAndDarkmode.js"
+import {themeLightmodeAndDarkmode , toggleThemebugFix} from "./themeLightmodeAndDarkmode.js"
 
 
 // apiWordSearchFunction("hello").then(result => makeElements(result))
@@ -17,7 +17,7 @@ inputSearch.addEventListener("keydown", function (event){
             return
         }
         apiWordSearchFunction(inputSearch.value).then(result => makeElements(result))
-
+        toggleThemebugFix()
 
 
     }
@@ -32,6 +32,7 @@ iconSearch.addEventListener("click", (event)=> {
 
         console.log("passou")
         apiWordSearchFunction(inputSearch.value).then(result => makeElements(result))
+        toggleThemebugFix()
 
 })
 
@@ -96,3 +97,5 @@ const themeSwitcher = document.querySelector(".slider")
 themeSwitcher.addEventListener("click", function(){
   themeLightmodeAndDarkmode()
 })
+
+

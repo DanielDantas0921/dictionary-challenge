@@ -111,8 +111,19 @@ body.darkmode{
     width: 100%;
     padding: 1rem 1rem;
     border-radius: 20px;
-    background-color: #F4F4F4;
    
+}
+
+.input-search.lightmode{
+    background-color: var(--grey04);
+    color: var(--black03);
+    font-weight: bold;
+}
+
+.input-search.darkmode{
+    background-color: var(--black02);
+    color: var(--white);
+    font-weight: bold;
 }
 
 .icon-search{
@@ -131,7 +142,15 @@ body.darkmode{
 }
 
 .word-search h1{
+    
+}
+
+.word-search h1.lightmode{
     color: var(--black03);
+}
+
+.word-search h1.darkmode{
+    color: var(--white);
 }
 .word-search p{
     color: var(--violet);
@@ -153,8 +172,16 @@ ul{
 
 .part-of-speech{
     margin: 1rem 0;
+    
+}
+
+.part-of-speech.lightmode{
     color: var(--black03);
 }
+
+.part-of-speech.darkmode{
+    color: var(--white);
+}   
 
 .meaning{
     margin: 0.8rem 0;
@@ -162,8 +189,16 @@ ul{
 }
 
 
-.divMeaning ul{
+.divMeaning ul.lightmode{
     color: var(--black03);
+}
+
+.divMeaning ul.darkmode{
+    color: var(--white);
+}
+
+.divMeaning ul li::marker{
+    color: var(--violet);
 }
 
 .synonymous{
@@ -195,18 +230,3 @@ ul{
     cursor: pointer;
 }
 
-#labelzinha::after{
-    content: "teste";
-}
-
-#labelzinha::before{
-    content: "outro teste";
-}
-
-.spanzinhosafado::after{
-    content: "aa";
-}
-
-.spanzinhosafado::before{
-    content: "bb";
-}
